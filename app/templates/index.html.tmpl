@@ -45,9 +45,10 @@
                 var ts = new Date().getTime();
                 var expireInterval = Number({{ .ExpireInterval }});
                 var removeInterval = Number({{ .RemoveInterval }});
+                var urlHref = window.location.href;
 
                 $.ajax({
-                     url: "/demo?" + ts,
+                     url: urlHref + "/demo?" + ts,
                      dataType: "json",
                      cache: false,
                      beforeSend: function (request) {},
